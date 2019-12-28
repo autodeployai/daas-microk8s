@@ -31,5 +31,5 @@ Then, you can open the DaaS web portal https://xxx.xxx.xxx.xxx by a browser.
 ```
 NOTE: you can get `expose-ip.sh` and `copy-ssl-cert.sh` in the current repository
 
-### How to get a trial version
-Please do not hesitate to send a mail to autodeploy.ai@gmail to request a download link.
+## How to get a trial version
+Please do not hesitate to send a mail to autodeploy.ai(at)gmail to request a download link.
