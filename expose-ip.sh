@@ -16,15 +16,20 @@
 # limitations under the License.
 #
 
-if [ "$#" -ne "1" ]
-then
-  echo "Please call '$0 xxx.xxx.xxx.xxx' to run this command."
+if [ $# -lt 1 ]; then
+  echo "Please call '$0 xxx.xxx.xxx.xxx [port]' to run this command."
   exit 1
 fi
 
 ipaddr=$1
-microk8s.kubectl patch svc daas-nginx-svc -p "{\"spec\":{\"externalIPs\":[\"${ipaddr}\"]}}" -ndaas
+port=443
 
-echo "Please open the address 'https://${ipaddr}/' to manager your AI models and deployments by browser."
+if [ "$2" != "" ]; then
+  port=$2
+fi
+
+microk8s.kubectl patch svc daas-nginx-svc --type merge --patch "{\"spec\":{\"externalIPs\":[\"${ipaddr}\"],\"ports\":[{\"name\":\"https-port\",\"port\":${port},\"protocol\":\"TCP\",\"targetPort\":443}]}}" -ndaas
+
+echo "Please open the address 'https://${ipaddr}:${port}/' to manager your AI models and deployments by browser."
 echo "The default administration account is: admin/password, you can change its password from 'Home / Console / User Managerment'."
 

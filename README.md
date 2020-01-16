@@ -19,11 +19,11 @@ Run all the following commands as `root`.
 1. Install one of both:
     * daas-0.9.0.0-standalone-all.run, 2.97G, an offline installer, used in the environment without internet access.
     * daas-0.9.0.0-standalone.run, 2.69G, a web installer, it installs MicroK8s and others by snap online.
-2. Run the following script to bind the DaaS service to the IP address of the server:
+2. Run the following script to bind the DaaS service to the IP address of the server, the second argument `port` is optional with the default value `443`:
 ```
-./expose-ip.sh xxx.xxx.xxx.xxx
+./expose-ip.sh xxx.xxx.xxx.xxx [port]
 ```
-Then, you can open the DaaS web portal https://xxx.xxx.xxx.xxx by a browser. 
+Then, you can open the DaaS web portal `https://xxx.xxx.xxx.xxx` or `https://xxx.xxx.xxx.xxx:port` by a browser. 
 
 3. [Optional] DaaS uses a self-signed certificate by default, you could get a warning from a browser when access it, you can install your own ssl certificate of the domain for your server by the command:
 ```
