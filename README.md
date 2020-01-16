@@ -14,7 +14,7 @@ DaaS-MicroK8s help users to install DaaS into a single server based on [MicroK8s
 * Ubuntu 18.04 LTS recommended (Snap is pre-installed in Ubuntu 16.04.4 LTS or lator)
 
 ## Install Instructions
-Run all the following commands as `root`.
+Run all the following commands as `root`:
 
 1. Install one of both:
     * daas-0.9.0.0-standalone-all.run, 2.97G, an offline installer, used in the environment without internet access.
@@ -32,4 +32,4 @@ Then, you can open the DaaS web portal `https://xxx.xxx.xxx.xxx` or `https://xxx
 NOTE: you can get `expose-ip.sh` and `copy-ssl-cert.sh` in the current repository
 
 ## How to get a trial version
-Please do not hesitate to send a mail to autodeploy.ai(at)gmail to request a download link.
+Please do not hesitate to send a mail to `autodeploy.ai(at)gmail.com` to request a download link.
