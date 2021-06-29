@@ -1,7 +1,7 @@
 #!/bin/sh
 
 #
-# Copyright (c) 2017-2019 AutoDeploy AI
+# Copyright (c) 2017-2021 AutoDeployAI
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -33,7 +33,13 @@ if [ ! -f "$certkey" ]; then
   exit 1
 fi
 
-customerdir="/daas-home/config/customer-ssl"
+homedir=/daas-home
+if [ ! -d "$homedir" ]; then
+  echo "Make sure that run the command in any POD of DaaS."
+  exit 1
+fi
+
+customerdir="${homedir}/config/customer-ssl"
 if [ ! -d "$customerdir" ]; then
   mkdir -p $customerdir 
 fi
