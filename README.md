@@ -2,6 +2,7 @@
 
 DaaS-MicroK8s is a free DaaS edition for a single node Kubernetes cluster based on [MicroK8s](https://microk8s.io/) that is the smallest, fastest, fully-conformant single node Kubernetes cluster. DaaS-MicroK8s makes it easy to set up AI model deployment service in your private cloud environment, it provides complete AI model deployment capabilities. More details about DaaS, see its official website: https://www.autodeploy.ai/
 
+![DaaS-home](snapshots/daas-home.png)
 
 ## System Requirements
 
